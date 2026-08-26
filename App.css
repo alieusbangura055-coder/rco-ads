@@ -1,0 +1,120 @@
+:root {
+  --primary: #2f6f4f;
+  --accent: #c9a24b;
+  --bg: #f7f7f4;
+  --card-bg: #ffffff;
+  --text: #1f2a24;
+  --border: #dfe3df;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header h1 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+
+.subtitle {
+  margin: 0 0 12px;
+  color: #4a554e;
+  font-size: 0.95rem;
+}
+
+.sample-banner {
+  background: #fff6e0;
+  border: 1px solid var(--accent);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.controls select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  min-width: 260px;
+  max-width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+  .controls select { min-width: 100%; }
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+.insight-card {
+  grid-column: 1 / -1;
+  background: #f1f7f3;
+}
+
+.insight-panel h4 {
+  margin: 0 0 8px;
+}
+
+.gap-note {
+  font-size: 0.85rem;
+  color: #4a554e;
+  margin-top: 6px;
+}
+
+.sample-warning {
+  font-size: 0.8rem;
+  color: #8a6d1f;
+  margin-top: 8px;
+}
+
+.empty-state, .loading {
+  color: #777;
+  font-style: italic;
+}
+
+.error-banner {
+  background: #fdecea;
+  border: 1px solid #e57373;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #7a1f1f;
+}
